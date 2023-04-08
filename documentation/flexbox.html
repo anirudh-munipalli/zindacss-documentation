@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SamplePage.html.css"/>
+    <link rel="stylesheet" href="./flexbox.html.css"/>
+    <title>Flexbox and Positioning in ZindaCSS</title>
+</head>
+<body>
+    <header class="sticky-top bg_rgb(232,204,67)" style="height: fit-content;">
+        <h1 class="display-inline-block margin-left-3 color_rgb(105,92,30)"><a href="#" class="no-underline">ZindaCSS</a></h1>
+        <nav class="display-inline-block pad_2% pos-right margin-right-5 width-fit-content tablet-nodisplay phone-nodisplay">
+            <zindagroup id="heading-nav-links" class="margin-5 color_#69613E bg_#B8A335:hover pad-5 round-border-1 transition_background-color_.32s"></zindagroup>
+            <a href="" class="heading-nav-links">Documentation</a>
+            <a href="" class="heading-nav-links">About</a>
+            <a href="" class="heading-nav-links">Github</a>
+        </nav>
+    </header>
+    <main class="nowrap">
+        <zindagroup id="code" class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3"></zindagroup>
+        <zindagroup id="sitemap" class="color_#695C1E bg_#ECDC8B width-10 margin-0 margin-y-1 pad-0 pad-y-1 margin-0 border-normal border-brown bg_#FFEE96:hover"></zindagroup>
+        <zindagroup id="sitemap-current" class="bg_#B5A035 width-10 margin-y-1 margin-0 pad-0 border-normal border-brown"></zindagroup>
+        <div style="display: inline; position: fixed; width: fit-content; margin: 0; margin-top: 1vh;" class="phone-nodisplay tablet-nodisplay">
+            <ul style="list-style:none; overflow-y: scroll; width: fit-content; max-height: 80vh; margin: 0;" class="pad-0 bg_#B8A335 display-inline-block">
+                <li class="sitemap"><a style="display: block;"href='./working.html'>How ZindaCSS Works?</a></li>
+                <li class="sitemap"><a style="display: block;"href="./gettingstarted.html">Getting Started / Initiating</a></li>
+                <li class="sitemap"><a style="display: block;"href="./color.html">Colors and background colors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./borders.html">Borders</a></li>
+                <li class="sitemap-current"><a style="display: block;"href="./flexbox.html">Flex box</a></li>
+                <li class="sitemap"><a style="display: block;"href="./responsive.html">Responsive Behavior</a></li>
+                <li class="sitemap">
+                    <ul style="list-style: none;">
+                        <li class="sitemap"><a style="display: block;"href="./animations/index.html">Animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-entry.html">Entry animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-focus.html">Focus animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-exit.html">Exit animations</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap"><a style="display: block;"href="./alert.html">Alert boxes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./padding.html">Padding</a></li>
+                <li class="sitemap"><a style="display: block;"href="./margin.html">Margin</a></li>
+                <li class="sitemap"><a style="display: block;"href="./width.html">Width</a></li>
+                <li class="sitemap"><a style="display: block;"href="./height.html">Height</a></li>
+                <li class="sitemap"><a style="display: block;"href="./objposition.html">Object Positioning</a></li>
+                <li class="sitemap"><a style="display: block;"href="./shadows.html">Shadows</a></li>
+                <li class="sitemap"><a style="display: block;"href="./theme.html">Themes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./customval.html">Custom Values</a></li>
+                <li class="sitemap"><a style="display: block;"href="./hover.html">Hover</a></li>
+                <li class="sitemap"><a style="display: block;"href="./groups.html">Grouping</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherSelectors.html">Other Selectors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./transition.html">Transitions</a></li>
+                <li class="sitemap"><a style="display: block;"href="./cursor.html">Cursor</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherfeatures.html">Other Features</a></li>
+
+            </ul>
+        </div>
+
+        <article class="width-10 desktop-width-8 color margin-left-0 desktop-margin-left-2 padding-left_1% phone-margin-left-0">
+            <h2>Flexbox and Positioning in ZindaCSS</h2>
+            <zindatheme class="rgb(105,92,30) rgb(232,205,67)" full-page="false"></zindatheme>
+
+            <p>ZindaCSS offers a lot of flexbox properties</p>
+            <section>
+                <h4>Item positioning</h4>
+                <p>You can position items in centre, end, start, and can space between and around the objects.</p>
+                <div id="test-item-pos">
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT ONE</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT TWO</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT THREE</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT FOUR</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT FIVE</span>
+                </div>
+                <br>
+                <div class="item-centre item-start item-end item-space-around item-space-between" style="display: none;"></div>
+                <div>
+                    <zindagroup id="flex-pos-btn" class="bg color_#444444 color-black:hover bg_#B5A035:hover transition_background-color_.5s_,color_.5s"></zindagroup>
+                    <button onclick="click1('centre')" class="flex-pos-btn">Centre Class: item-centre</button>
+                    <button onclick="click1('end')" class="flex-pos-btn">End Class: item-end</button>
+                    <button onclick="click1('start')" class="flex-pos-btn">Start Class: item-start</button>
+                    <button onclick="click1('around')" class="flex-pos-btn">space between Class: item-space-around</button>
+                    <button onclick="click1('between')" class="flex-pos-btn">Space around Class: item-space-between</button>
+                </div>
+                <script>
+                    var test1 = document.getElementById("test-item-pos");
+                    var type1 = {
+                        "centre": "item-centre",
+                        "end": "item-end",
+                        "start": "item-start",
+                        "around": "item-space-around",
+                        "between": "item-space-between",
+                        
+                    }
+                    function click1(t){
+                        var objCl = type1[t];
+                        test1.classList.remove("item-centre", "item-start", "item-end", "item-space-around", "item-space-between")
+                        test1.className += " " + objCl;
+                    }
+                </script>
+            </section>
+            <section>
+                <h4>Item wraps</h4>
+                <p>If the items cannot fit in the space provided, this tells what should be done</p>
+                <div id="test-item-wrap">
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT ONE</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT TWO</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT THREE</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT FOUR</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT FIVE</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT SIX</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT SEVEN</span>
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT EIGHT</span>
+                </div>
+                <br>
+                <div class="wrap nowrap wrap-reverse" style="display: none;"></div>
+
+                <div>
+                    <button onclick="click2('wrap')" class="flex-pos-btn">Wrap Class: wrap</button>
+                    <button onclick="click2('nowrap')" class="flex-pos-btn">No Wrap Class: nowrap</button>
+                    <button onclick="click2('reverse')" class="flex-pos-btn">Reverse Wrap Class: wrap-reverse</button>
+                </div>
+                <script>
+                    var test2 = document.getElementById("test-item-wrap");
+                    var types2 = {
+                        "wrap": "wrap",
+                        "nowrap": "nowrap",
+                        "reverse": "wrap-reverse",
+                    }
+                    function click2(t){
+                        var objCl = types2[t];
+                        test2.classList.remove("wrap", "nowrap", "wrap-reverse")
+                        test2.className += " " + objCl;
+                    }
+                </script>
+            </section>
+            <section>
+                <h4>Centre the items</h4>
+                <p>Put the items at the centre, vertically, horizontally or both.</p>
+                <div id="test-item-align">
+                    <span class="border-solid border-size-thick border-sky-7">TEST OBJECT</span>
+                </div>
+                <br>
+                <div class="vertical-centre horizontal-centre align-centre" style="display: none;"></div>
+            
+                <div>
+                    <button onclick="click3('vertical')" class="flex-pos-btn">Vertical Centre Class: <em>vertical-centre</em></button>
+                    <button onclick="click3('horizontal')" class="flex-pos-btn">Horizontal Centre class: <em>horizontal-centre</em></button>
+                    <button onclick="click3('both')" class="flex-pos-btn">Centre horizontal and vertical class: <em>align-centre</em></button>
+                </div>
+                <script>
+                    var test3 = document.getElementById("test-item-align");
+                    var types3 = {
+                        "vertical": "vertical-centre",
+                        "horizontal": "horizontal-centre",
+                        "both": "align-centre",
+                    }
+                    function click3(t){
+                        var objCl = types3[t];
+                        test3.classList.remove("vertical-centre", "horizontal-centre", "align-centre")
+                        test3.className += " " + objCl;
+                    }
+                </script>
+            </section>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

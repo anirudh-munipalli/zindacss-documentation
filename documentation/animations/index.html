@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../SamplePage.html.css"/>
+    <link rel="stylesheet" href="./index.html.css"/>
+    <title>Animation Properties in ZindaCSS</title>
+</head>
+<body>
+    <header class="sticky-top bg_rgb(232,204,67)" style="height: fit-content;">
+        <h1 class="display-inline-block margin-left-3 color_rgb(105,92,30)"><a href="#" class="no-underline">ZindaCSS</a></h1>
+        <nav class="display-inline-block pad_2% pos-right margin-right-5 width-fit-content tablet-nodisplay phone-nodisplay">
+            <zindagroup id="heading-nav-links" class="margin-5 color_#69613E bg_#B8A335:hover pad-5 round-border-1 transition_background-color_.32s"></zindagroup>
+            <a href="" class="heading-nav-links">Documentation</a>
+            <a href="" class="heading-nav-links">About</a>
+            <a href="" class="heading-nav-links">Github</a>
+        </nav>
+    </header>
+    <main class="nowrap">
+        <zindagroup id="code" class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3"></zindagroup>
+        <zindagroup id="sitemap" class="color_#695C1E bg_#ECDC8B width-10 margin-0 margin-y-1 pad-0 pad-y-1 margin-0 border-normal border-brown bg_#FFEE96:hover"></zindagroup>
+        <zindagroup id="sitemap-current" class="bg_#B5A035 width-10 margin-y-1 margin-0 pad-0 border-normal border-brown"></zindagroup>
+        <div style="display: inline; position: fixed; width: fit-content; margin: 0; margin-top: 1vh;" class="phone-nodisplay tablet-nodisplay">
+            <ul style="list-style:none; overflow-y: scroll; width: fit-content; max-height: 80vh; margin: 0;" class="pad-0 bg_#B8A335 display-inline-block">
+                <li class="sitemap"><a style="display: block;"href='../working.html'>How ZindaCSS Works?</a></li>
+                <li class="sitemap"><a style="display: block;"href="../gettingstarted.html">Getting Started / Initiating</a></li>
+                <li class="sitemap"><a style="display: block;"href="../color.html">Colors and background colors</a></li>
+                <li class="sitemap"><a style="display: block;"href="../borders.html">Borders</a></li>
+                <li class="sitemap"><a style="display: block;"href="../flexbox.html">Flex box</a></li>
+                <li class="sitemap"><a style="display: block;"href="../responsive.html">Responsive Behavior</a></li>
+                <li class="sitemap">
+                    <ul style="list-style: none;">
+                        <li class="sitemap-current"><a style="display: block;"href="./index.html">Animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations-entry.html">Entry animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations-focus.html">Focus animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations-exit.html">Exit animations</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap"><a style="display: block;"href="../alert.html">Alert boxes</a></li>
+                <li class="sitemap"><a style="display: block;"href="../padding.html">Padding</a></li>
+                <li class="sitemap"><a style="display: block;"href="../margin.html">Margin</a></li>
+                <li class="sitemap"><a style="display: block;"href="../width.html">Width</a></li>
+                <li class="sitemap"><a style="display: block;"href="../height.html">Height</a></li>
+                <li class="sitemap"><a style="display: block;"href="../objposition.html">Object Positioning</a></li>
+                <li class="sitemap"><a style="display: block;"href="../shadows.html">Shadows</a></li>
+                <li class="sitemap"><a style="display: block;"href="../theme.html">Themes</a></li>
+                <li class="sitemap"><a style="display: block;"href="../customval.html">Custom Values</a></li>
+                <li class="sitemap"><a style="display: block;"href="../hover.html">Hover</a></li>
+                <li class="sitemap"><a style="display: block;"href="../groups.html">Grouping</a></li>
+                <li class="sitemap"><a style="display: block;"href="../otherSelectors.html">Other Selectors</a></li>
+                <li class="sitemap"><a style="display: block;"href="../transition.html">Transitions</a></li>
+                <li class="sitemap"><a style="display: block;"href="../cursor.html">Cursor</a></li>
+                <li class="sitemap"><a style="display: block;"href="../otherfeatures.html">Other Features</a></li>
+
+            </ul>
+        </div>
+        <zindatheme class="rgb(105,92,30) rgb(232,205,67)" full-page="false"></zindatheme>
+        <article class="width-10 desktop-width-8 color margin-left-0 desktop-margin-left-2 padding-left_1% phone-margin-left-0">
+            <h2>Animation Properties</h2>
+            <div class="anim-fadeInOut border-solid border-sky" id="test">TEST</div>
+            <p>
+                The animation by default <strong>plays over 2 seconds, has no delay, goes in a linear manner, infinitely.</strong>
+                <br>
+                You can change this using animation properties.
+            </p>
+            <section>
+                <h4>Animation Duration</h4>
+                <p>
+                    Change animation duration to any of the following values with the classes(duration in seconds):<br>
+                    <script>
+                        var test = document.getElementById('test')
+                        function animDuration(obj){
+                            var duration = obj.innerHTML.split(' ')[0];
+                            duration = duration.replace('.', 'o')
+                            var className = ''
+                            test.classList.forEach((e) => {
+                                if(e.search('anim-duration') == -1){
+                                    className += e + " ";
+                                }
+                            })
+                            duration = duration.replace('0', '')
+                            className += 'anim-duration-' + duration.trim();
+                            test.className = className;
+                        }
+                    </script>
+                    <span style="display:none;" class="anim-duration-o25 anim-duration-o5 anim-duration-o75 anim-duration-1 anim-duration-1o25 anim-duration-1o5 anim-duration-1o75 anim-duration-2 anim-duration-2o25 anim-duration-2o5 anim-duration-2o75 anim-duration-3 anim-duration-3o25 anim-duration-3o5 anim-duration-3o75 anim-duration-4"></span>
+                    <button onclick="animDuration(this)">0.25 - Class: <strong>anim-duration-o25</strong></button>
+                    <button onclick="animDuration(this)">0.5 - Class: <strong>anim-duration-o5</strong></button>
+                    <button onclick="animDuration(this)">0.75 - Class: <strong>anim-duration-o75</strong></button>
+                    <button onclick="animDuration(this)">1 - Class: <strong>anim-duration-1</strong></button>
+                    <button onclick="animDuration(this)">1.25 - Class: <strong>anim-duration-1o25</strong></button>
+                    <button onclick="animDuration(this)">1.5 - Class: <strong>anim-duration-1o5</strong></button>
+                    <button onclick="animDuration(this)">1.75 - Class: <strong>anim-duration-1o75</strong></button>
+                    <button onclick="animDuration(this)">2 - Class: <strong>anim-duration-2</strong></button>
+                    <button onclick="animDuration(this)">2.25 - Class: <strong>anim-duration-2o25</strong></button>
+                    <button onclick="animDuration(this)">2.5 - Class: <strong>anim-duration-2o5</strong></button>
+                    <button onclick="animDuration(this)">2.75 - Class: <strong>anim-duration-2o75</strong></button>
+                    <button onclick="animDuration(this)">3 - Class: <strong>anim-duration-3</strong></button>
+                    <button onclick="animDuration(this)">3.25 - Class: <strong>anim-duration-3o25</strong></button>
+                    <button onclick="animDuration(this)">3.5 - Class: <strong>anim-duration-3o5</strong></button>
+                    <button onclick="animDuration(this)">3.75 - Class: <strong>anim-duration-3o75</strong></button>
+                    <button onclick="animDuration(this)">4 - Class: <strong>anim-duration-4</strong></button>
+
+                </p>
+            </section>
+            <section>
+                <h4>Animation Count</h4>
+                <p>
+                    Change animation count to any of the following values with the classes:<br>
+                    <script>
+                        function animCount(obj){
+                            var count = obj.innerHTML.split(' ')[0];
+                            var className = ''
+                            test.classList.forEach((e) => {
+                                if(e.search('anim-count') == -1){
+                                    className += e + " ";
+                                }
+                            })
+                            test.className = ''
+                            className += 'anim-count-' + count.trim();
+                            test.className = className;
+                        }
+                    </script>
+                    <span style="display:none;" class="anim-count-1 anim-count-2 anim-count-3 anim-count-4 anim-count-5 anim-count-infinite"></span>
+                    <button onclick="animCount(this)">1 Class:anim-count-1</button>
+                    <button onclick="animCount(this)">2 Class:anim-count-2</button>
+                    <button onclick="animCount(this)">3 Class:anim-count-3</button>
+                    <button onclick="animCount(this)">4 Class:anim-count-4</button>
+                    <button onclick="animCount(this)">5 Class:anim-count-5</button>
+                    <button onclick="animCount(this)">infinite Class:anim-count-infinite</button>
+
+                </p>
+            </section>
+            <section>
+                <h4>Animation Delay</h4>
+                <p>
+                    Change animation delay to any of the following values with the classes:<br>
+                    <script>
+                        var test = document.getElementById('test')
+                        function animDelay(obj){
+                            var delay = obj.innerHTML.split(' ')[0];
+                            delay = delay.replace('.', 'o')
+                            var className = ''
+                            test.classList.forEach((e) => {
+                                if(e.search('anim-delay') == -1){
+                                    className += e + " ";
+                                }
+                            })
+                            delay = delay.replace('0', '')
+                            className += 'anim-delay-' + delay.trim();
+                            test.className = className;
+                        }
+                    </script>
+                    <span style="display:none;" class="anim-delay-o25 anim-delay-o5 anim-delay-o75 anim-delay-1 anim-delay-1o25 anim-delay-1o5 anim-delay-1o75 anim-delay-2 anim-delay-2o25 anim-delay-2o5 anim-delay-2o75 anim-delay-3 anim-delay-3o25 anim-delay-3o5 anim-delay-3o75 anim-delay-4"></span>
+                    <button onclick="animDelay(this)">0.25 - Class: <strong>anim-delay-o25</strong></button>
+                    <button onclick="animDelay(this)">0.5 - Class: <strong>anim-delay-o5</strong></button>
+                    <button onclick="animDelay(this)">0.75 - Class: <strong>anim-delay-o75</strong></button>
+                    <button onclick="animDelay(this)">1 - Class: <strong>anim-delay-1</strong></button>
+                    <button onclick="animDelay(this)">1.25 - Class: <strong>anim-delay-1o25</strong></button>
+                    <button onclick="animDelay(this)">1.5 - Class: <strong>anim-delay-1o5</strong></button>
+                    <button onclick="animDelay(this)">1.75 - Class: <strong>anim-delay-1o75</strong></button>
+                    <button onclick="animDelay(this)">2 - Class: <strong>anim-delay-2</strong></button>
+                    <button onclick="animDelay(this)">2.25 - Class: <strong>anim-delay-2o25</strong></button>
+                    <button onclick="animDelay(this)">2.5 - Class: <strong>anim-delay-2o5</strong></button>
+                    <button onclick="animDelay(this)">2.75 - Class: <strong>anim-delay-2o75</strong></button>
+                    <button onclick="animDelay(this)">3 - Class: <strong>anim-delay-3</strong></button>
+                    <button onclick="animDelay(this)">3.25 - Class: <strong>anim-delay-3o25</strong></button>
+                    <button onclick="animDelay(this)">3.5 - Class: <strong>anim-delay-3o5</strong></button>
+                    <button onclick="animDelay(this)">3.75 - Class: <strong>anim-delay-3o75</strong></button>
+                    <button onclick="animDelay(this)">4 - Class: <strong>anim-delay-4</strong></button>
+                </p>
+                <section>
+                    <h4>Animation Direction</h4>
+                    <p>
+                        Decide the direction in which animation will go:
+                        <ul>
+                            <li>Forward Class:<strong> anim-dir-normal</strong> |<strong> anim-dir-forward</strong></li>
+                            <li>Backward Class:<strong> anim-dir-reverse</strong> |<strong> anim-dir-backward</strong></li>
+                            <li>Alternate forward backward Class:<strong> anim-dir-forward-backward </strong>|<strong> anim-dir-alternate</strong></li>
+                            <li>Alternate reverse backward forward Class:<strong> anim-dir-backward-forward</strong> |<strong> anim-dir-alternate-reverse</strong></li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h4>Animation Fill mode</h4>
+                    <p>
+                        Decide if the animation's effects will stay before and / or after the animation is completed.
+                        <br>
+                        Usually, after the animation is completed, the changes made through the animation will not stay. This helps change that.
+                        <ul>
+                            <li>Stay after end Class:<strong> anim-stay-end</strong> |<strong> anim-fill-forwards</strong></li>
+                            <li>Stay before Class:<strong> anim-stay-start</strong> |<strong> anim-fill-backwards</strong></li>
+                            <li>Stay after and before Class:<strong> anim-stay </strong>|<strong> anim-fill-both</strong></li>
+                            <li>None Class:<strong> anim-fill-none</strong> |<strong> anim-dir-alternate-reverse</strong></li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h4>Animation Speed</h4>
+                    <p>
+                        At what speed should the animation go:
+                        <ul>
+                            <li>Linear: The same speed throughout: Class: <strong>anim-speed-linear | anim-speed-straight</strong></li>
+                            <li>Ease: Slow start, fast in middle, slow end: Class: <strong>anim-speed-ease | anim-speed-normal</strong></li>
+                            <li>Ease in: The starting is slower than the rest: Class: <strong>anim-speed-slow-start | anim-speed-ease-in</strong></li>
+                            <li>Ease out: The ending is slower than the rest: Class: <strong>anim-speed-slow-end | anim-speed-ease-out</strong></li>
+                            <li>Ease in out: A slow start and a slow end: Class: <strong>anim-speed-slow-start-end | anim-speed-ease-in-out</strong></li>
+                        </ul>
+                    </p>
+                </section>
+            </section>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

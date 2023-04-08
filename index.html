@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.html.css"/>
+    <title>ZindaCSS</title>
+</head>
+<body>
+    <zindatheme class="rgb(105,92,30) rgb(232,205,67)" full-page="false"></zindatheme>
+    <zindagroup id="code" class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3"></zindagroup>
+    <header class="sticky-top bg_rgb(168,148,46)" style="height: fit-content;">
+        <h1 class="display-inline-block margin-left-3 color_rgb(105,92,30)"><a href="#" class="no-underline">ZindaCSS</a></h1>
+        <nav class="display-inline-block pad_2% pos-right margin-right-5 width-fit-content tablet-nodisplay phone-nodisplay">
+            <zindagroup id="heading-nav-links" class="margin-5 color-black bg_#B8A335:hover pad-5 round-border-1 transition_background-color_.32s,_color.5s color_#ffffff:hover"></zindagroup>
+            <a href="./documentation/working.html" target="_blank" class="heading-nav-links">Documentation</a>
+            <a href="./about/index.html" class="heading-nav-links">About</a>
+            <a href="" class="heading-nav-links">Github</a>
+        </nav>
+    </header>
+    <main class="">
+        <div id="zindacss-logo" class="margin-0 wrap align-centre dir-column width-full bg_#8a7a28 margin-top-5">
+            <h2 class="margin-10 color_rgb(90,80,15) anim-flyIn anim-speed-ease-out anim-delay-1" style="font-size: xx-large;">ZindaCSS</h2>
+            <p class="anim-bob color_#d7c675">A CSS framework that values your time</p>
+            <div class="align-centre-text">
+                <a target="_blank" href="documentation/gettingstarted.html" class="no-underline"><button class="bg pad-x-7 pad-y-3 transition_background-color_.5s margin-3 bg_#B8A335:hover cursor-pointer">Get Started</button></a>
+                <a target="_blank" href="documentation/about/index.html" class="no-underline"><button class="bg pad-x-7 pad-y-3 transition_background-color_.5s margin-3 bg_#B8A335:hover cursor-pointer">About</button></a>
+            </div>
+        </div>
+        <section class="width-8 margin-left-5">
+            <h3>What is ZindaCSS?</h3>
+            <p>
+                ZindaCSS is a utility class based CSS framework, with classes like <span class="pad-3 border-solid">pad-3</span>, <span class="color-blue-6">color-blue-6</span>
+                that allow you to style even the largest websites, without even writing CSS.
+                <br>
+                Add colors and styles to your elements, all by adding simple classes. <br>
+                Example: <div class="color-black margin-3 border-solid">&lt;div class="color-black margin-3 border-solid"&gt;TEST&lt;/div&gt;</div>
+            </p>
+        </section>
+        <section class="margin-left-5 width-8" id="zindacss-usp">
+            <h3>How is this different from other CSS frameworks?</h3>
+            <p>
+                Apart from over a <strong>thousand</strong> classes to select from, we offer features
+                that make your website/app look alive:
+                <div class="nowrap dir-row item-space-between width-full align-centre">
+                <div class="desktop-width-5 width-full">
+                        <h2>No Excess CSS</h2>
+                        Ever faced having a CSS framework with thousands of classes being used, when you
+                        only need a few. Not with ZindaCSS. All unused classes are removed and purged out,
+                        making your website faster to load.
+                        <br>
+                        This is done with the help of <a href="https://purgecss.com/" target="_blank">PurgeCSS</a>
+                </div>
+                <div class="excess-css phone-nodisplay tablet-nodisplay border-solid height-full nowrap desktop-width-8 width-full margin-0">
+                    <div class="width-full border-solid bg-black-5">
+                        <h4 class="margin-0 bg-black color-black-8 pad-left-3">HTML index.html</h4>
+                        <div id="excess-css-html" class="margin-0 margin-top-1 color-blue-5"></div>
+                    </div>
+                    <div class="width-full border-solid bg-black-5">
+                        <h4 class="margin-0 bg-black color-black-8 pad-left-3">CSS index.css</h4>
+                        <div id="excess-css-css" class="margin-0 margin-top-1 color-blue-5"></div>
+                    </div>
+                </div>
+                <script>
+                    function loadCSSHTMLDemo(){
+                    var htmlCSSArray = [
+                    ["&lt;div&gt;&lt;/div&gt;", ""],
+                    ["&lt;div class='color-blue'&gt;&lt;/div&gt;", ".color-blue{color: blue;}"],
+                    ["&lt;div class='color-blue bg-black'&gt;&lt;/div&gt;", ".color-blue{color: blue;}<br>.bg-black{background-color:black;}"],
+                    ["&lt;div class='color-blue bg-black border-solid'&gt;&lt;/div&gt;", ".color-blue{color: blue;}<br>.bg-black{background-color:black;}<br>.border-solid{border-type: solid;}"],
+                    ["&lt;div class='color-blue bg-black border-solid bg-blue:hover'&gt;&lt;/div&gt;", ".color-blue{color: blue;}<br>.bg-black{background-color:black;}<br>.border-solid{border-type: solid;}<br>.bg-blue\\:hover:hover{background-color: blue;}"],
+                    ["&lt;div class='color-blue bg-black border-solid bg-blue:hover color-white:hover'&gt;&lt;/div&gt;", ".color-blue{color: blue;}<br>.bg-black{background-color:black;}<br>.border-solid{border-type: solid;}<br>.bg-blue\\:hover:hover{background-color: blue;}<br> .color-white\\:hover:hover{color: white;}"],
+                    ]
+                    var count1 = 0;
+                    var interval1 = setInterval(() => {
+                        if(count1 < 5){
+                            count1++;
+                            document.getElementById("excess-css-html").innerHTML = htmlCSSArray[count1][0]
+                            document.getElementById("excess-css-css").innerHTML = htmlCSSArray[count1][1]
+                        } else {
+                            count1 = 0;
+                        }
+                    
+                    },1000)
+                }
+                var loaded1 = false;
+                let observer = new IntersectionObserver((e) => {
+                    if(!loaded1){
+                    loadCSSHTMLDemo()
+                    }
+                    loaded1 = true;
+                })
+                observer.observe(document.getElementById('excess-css-html'))
+                </script>
+                </div>
+                <div class="nowrap">
+                <div class="width-5 display-inline-block">
+                        <h2>Groups</h2>
+                        When a group of HTML elements use the same styles, it will be a havoc to manage them. 
+                        Making even one small change will take a frustratingly long time.
+                        <br>
+                        &lt;zindagroup&gt; our solution to this problem. <a href="./documentation/groups.html" class="color-black:hover">Find out more </a>
+                </div>
+                <div class=" border-solid width-full nowrap dir-row">
+                    <span class="pad-left-3 margin-0 border-solid height-full width-full display-inline-block">&lt;zindagroup id="random" class="color-black bg-blue"&gt;&lt;/zindagroup&gt;</span>
+                    <span class="pad-left-3 margin-0 width-full height-full border-solid display-inline-block">.random{<br>color: black;<br> background-color:blue;<br>}</span>
+                </div>
+                </div>
+                <div class="width-5">
+                        <h2>Themes</h2>
+                        <p>
+                            Notice how this page has a brown colored theme. You can do that too. <br>
+                            This allows you to set a consistent look for your page, with similar colors and background colors.
+                            <br>
+                           <a href="./documentation/theme.html" class="color-black:hover">Find out more in the Themes chapter</a>
+                        </p>
+                    </div>
+                    <div class="width-5">
+                        <h2>Custom Values</h2>
+                        If any of our thousand classes doesn't satisify your requirements, you can create a custom value. 
+                        <br>
+                        Example: To give text a color of #964B00:
+                        <div class="color_#964B00 code">&lt;div class="color_#964B00"&gt;&lt;/div&gt;</div>
+                        <a href="./documentation/customval.html" class="color-black:hover">To find out more check out the custom values chapter</a>
+                    </div>
+                    <div class="width-5">
+                        <h2>Animations</h2>
+                        Most CSS frameworks don't offer animations. <br>
+                        Save your time with ZindaCSS, as added a few entry, focus and exit animations to make your website
+                        lively. 
+                        <br>
+                        Skip writing <code class="bg-black-6 pad-1 text-black">@keyframe</code> and long animation names. Just add <strong>one</strong> class, and choose from over 15 animations:
+                        <br>
+                        <div class="code anim-shake anim-duration-1o25">&lt;div class="anim-shake"&gt;Just one of the many animations we offer&lt;/div&gt;</div><br>
+                        <a href="./documentation/animations/index.html" class="color-black:hover">Check out the animations chapter</a>
+                    </div>
+                    <div class="width-5">
+                        <h2>Support for frameworks</h2>
+                        Major frameworks such as React and Vue and supported by ZindaCSS.
+                        <br>
+                        Other frameworks are supported, but may have a few limitations
+                    </div>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

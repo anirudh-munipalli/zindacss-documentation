@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SamplePage.html.css"/>
+    <link rel="stylesheet" href="./color.html.css"/>
+    <title>Colors in ZindaCSS</title>
+</head>
+<body>
+    <zindatheme class="rgb(105,92,30) rgb(232,205,67)" full-page="false"></zindatheme>
+    <header class="sticky-top bg_rgb(232,204,67)" style="height: fit-content;">
+        <h1 class="display-inline-block margin-left-3 color_rgb(105,92,30)"><a href="#" class="no-underline">ZindaCSS</a></h1>
+        <nav class="display-inline-block pad_2% pos-right margin-right-5 width-fit-content tablet-nodisplay phone-nodisplay">
+            <zindagroup id="heading-nav-links" class="margin-5 color_#69613E bg_#B8A335:hover pad-5 round-border-1 transition_background-color_.32s"></zindagroup>
+            <a href="" class="heading-nav-links">Documentation</a>
+            <a href="" class="heading-nav-links">About</a>
+            <a href="" class="heading-nav-links">Github</a>
+        </nav>
+    </header>
+    <main class="nowrap">
+        <zindagroup id="code" class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3"></zindagroup>
+        <zindagroup id="sitemap" class="color_#695C1E bg_#ECDC8B width-10 margin-y-1 pad-1 margin-0 border-normal border-browns"></zindagroup>
+        <zindagroup id="sitemap-current" class="bg_#695C1E width-fit-content margin-1 pad-1"></zindagroup>
+        <div style="display: inline; position: fixed; width: fit-content; margin: 0; margin-top: 1vh;" class="phone-nodisplay tablet-nodisplay">
+            <ul style="list-style:none; overflow-y: scroll; width: fit-content; max-height: 80vh; margin: 0;" class="pad-0 bg_#B8A335 display-inline-block">
+                <li class="sitemap"><a style="display: block;"href='./working.html'>How ZindaCSS Works?</a></li>
+                <li class="sitemap"><a style="display: block;"href="./gettingstarted.html">Getting Started / Initiating</a></li>
+                <li class="sitemap-current"><a style="display: block;"href="./color.html">Colors and background colors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./borders.html">Borders</a></li>
+                <li class="sitemap"><a style="display: block;"href="./flexbox.html">Flex box</a></li>
+                <li class="sitemap"><a style="display: block;"href="./responsive.html">Responsive Behavior</a></li>
+                <li class="sitemap">
+                    <ul style="list-style: none;">
+                        <li class="sitemap"><a style="display: block;"href="./animations/index.html">Animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-entry.html">Entry animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-focus.html">Focus animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-exit.html">Exit animations</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap"><a style="display: block;"href="./alert.html">Alert boxes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./padding.html">Padding</a></li>
+                <li class="sitemap"><a style="display: block;"href="./margin.html">Margin</a></li>
+                <li class="sitemap"><a style="display: block;"href="./width.html">Width</a></li>
+                <li class="sitemap"><a style="display: block;"href="./height.html">Height</a></li>
+                <li class="sitemap"><a style="display: block;"href="./objposition.html">Object Positioning</a></li>
+                <li class="sitemap"><a style="display: block;"href="./shadows.html">Shadows</a></li>
+                <li class="sitemap"><a style="display: block;"href="./theme.html">Themes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./customval.html">Custom Values</a></li>
+                <li class="sitemap"><a style="display: block;"href="./hover.html">Hover</a></li>
+                <li class="sitemap"><a style="display: block;"href="./groups.html">Grouping</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherSelectors.html">Other Selectors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./transition.html">Transitions</a></li>
+                <li class="sitemap"><a style="display: block;"href="./cursor.html">Cursor</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherfeatures.html">Other Features</a></li>
+
+            </ul>
+        </div>
+        <article class="width-10 desktop-width-8 color margin-left-0 desktop-margin-left-2 padding-left_1% phone-margin-left-0">
+            <h2>Color and background color in ZindaCSS</h2>
+            <div>
+            <p class="color">
+                ZindaCSS has a wide range of colors to use. Using it, you can set text colors, background
+                colors, and border colors. We also allow <a href="#">custom values</a> to be used
+                for colors.
+            </p>
+            <br>
+            <div>
+                <a href="#color">Colors</a><br>
+                <a href="#bg">Background Colors</a><br>
+                <a href="#border-color">Border Colors</a>
+            </div>
+            <div id="color">
+                <br>
+                <h3 class="color_#69613E">Colors</h3>
+                <p>
+                    Using this, you can change the color of any text. All you have to do is create a class with a name. There are 8 predefined color classes:
+                    <ol>
+                        <li class="color-black">Black</li>
+                        <li class="color-red">Red</li>
+                        <li class="color-blue">Blue</li>
+                        <li class="color-green">Green</li>
+                        <li class="color-yellow">Yellow</li>
+                        <li class="color-purple">Purple</li>
+                        <li class="color-brown">Brown</li>
+                        <li class="color-sky">Sky</li>
+                    </ol>
+                    You can choose a specific color ranging from 1 to 10. If I want a dark green:
+                    <br><br>
+                    <code class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3" style="font-family: monospace;">color-green-3</code>
+                    <br><br> Following is a reference to all colors: <a href="./reference/color.test.html">ZindaCSS color reference</a>
+                </p>
+                <p>
+                    <h5 class="color_#69613E">Custom Colors</h5>
+                    <p>
+                        You can add custom colors using hex, rgb, rgba and hsl. To do so, simply use the class
+                        name:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 color-green-6" style="font-family: monospace;">color<span>_</span><i>ValueOfColor</i></code>
+                        <br><br>
+                        If I want to add a color #f58799 to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 color_#f58799" style="font-family: monospace;">
+                            <span><</span>span class="color_#f58799">Some text<span><</span>/span>
+                        </code> 
+                        <br><br>
+                        If I want to add a color rgb(33,100,210) to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 color_rgb(33,100,210) " style="font-family: monospace;">
+                            <span><</span>span class="color_rgb(33,100,210)">Some text<span><</span>/span>
+                        </code>
+                        <br><br>
+                        If I want to add a color hsl(217,54,40) to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 color_hsl(217,54,40) " style="font-family: monospace;">
+                            <span><</span>span class="color_hsl(217,54,40))">Some text<span><</span>/span>
+                        </code>
+                    </p>
+                </p>
+            </div>
+            <div id="bg">
+                <br>
+                <h3 class="color_#69613E">Background Colors</h3>
+                <p>
+                    Using this, you can change the background color of any element. All you have to do is create a class with a name. This is very similar to color, and
+                    has the same predefined classes.
+                    <ol class="color-black-8">
+                        <li class="bg-black">Black</li>
+                        <li class="bg-red">Red</li>
+                        <li class="bg-blue">Blue</li>
+                        <li class="bg-green">Green</li>
+                        <li class="bg-yellow">Yellow</li>
+                        <li class="bg-purple">Purple</li>
+                        <li class="bg-brown">Brown</li>
+                        <li class="bg-sky">Sky</li>
+                    </ol>
+                    You can choose a specific background color ranging from 1 to 10. If I want a dark green:
+                    <br><br>
+                    <code class="border-normal border-black border-size-thick pad-1 margin-3 bg-green-3 color-white" style="font-family: monospace;">bg-green-3</code>
+                    <br><br> Following is a reference to all background colors: <a href="./reference/background-color.test.html">ZindaCSS background-color reference</a>
+                </p>
+                <p>
+                    <h5 class="color_#69613E">Custom Backgrounds</h5>
+                    <p>
+                        You can add custom backgrounds using hex, rgb, rgba and hsl. To do so, simply use the class
+                        name:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 color-green-6" style="font-family: monospace;">bg_<i>ValueOfColor</i></code>
+                        <br><br>
+                        If I want to add a background color #f58799 to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 bg_#f58799" style="font-family: monospace;">
+                            <span><</span>span class="bg_#f58799">Some text<span><</span>/span>
+                        </code> 
+                        <br><br>
+                        If I want to add a background color rgb(33,100,210) to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 bg_rgb(33,100,210) " style="font-family: monospace;">
+                            <span><</span>span class="bg_rgb(33,100,210)">Some text<span><</span>/span>
+                        </code>
+                        <br><br>
+                        If I want to add a background color hsl(32deg,81%,40%) to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 bg_hsl(32deg,81%,40%)" style="font-family: monospace;">
+                            <span><</span>span class="bg_hsl(32deg,81%,40%)">Some text<span><</span>/span>
+                        </code>
+                    </p>
+                </p>
+            </div>
+            <div id="border-color">
+                <br>
+                <h3>Border Colors</h3>
+                <p>
+                    Once you have a border, you can customise it's color. Learn more about borders 
+                    in <a href="./borders.html">border</a> chapter. Border acts in the same way as 
+                    colors and background colors. The same eight predefined colors apply
+                    <ol class="color-black">
+                        <li class="border-solid border-black">Black</li>
+                        <li class="border-solid border-red">Red</li>
+                        <li class="border-solid border-blue">Blue</li>
+                        <li class="border-solid border-green">Green</li>
+                        <li class="border-solid border-yellow">Yellow</li>
+                        <li class="border-solid border-purple">Purple</li>
+                        <li class="border-solid border-brown">Brown</li>
+                        <li class="border-solid border-sky">Sky</li>
+                    </ol>
+                    You can change the change among these from a value of 1 to 10. To add a dark sky border:
+                    <br><br>
+                    <code class="border-size-thick pad-1 margin-3 border-sky-3 border-normal color-black" style="font-family: monospace;">border-sky-3</code>
+                    <br><br> Following is a reference to all border colors: <a href="./reference/border-color.test.html">ZindaCSS border color reference</a>
+                </p>
+                <p>
+                    <h5 class="color_#69613E">Custom Border colors</h5>
+                    <p>
+                        You can add custom border colors using hex, rgb, rgba and hsl. To do so, simply use the class
+                        name:
+                        <br><br>
+                        <code class="border-normal border_#ff00ff border-size-thick pad-1 margin-3 color-green-6" style="font-family: monospace;">border-<i>ValueOfColor</i></code>
+                        <br><br>
+                        <em>
+                            Note: It is required to have a border type for borders to show up. Here, <strong>border-normal</strong> is used
+                            there are multiple options available. See <a href="./borders.html">borders</a> to know more.
+                        </em>
+                        If I want to add a border color #68eef9 to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 border_#68eef9" style="font-family: monospace;">
+                            <span><</span>span class="border-normal border_#68eef9">Some text<span><</span>/span>
+                        </code> 
+                        <br><br>
+                        If I want to add a border color rgb(33,100,210) to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 border_rgb(33,100,210) " style="font-family: monospace;">
+                            <span><</span>span class="border-normal border_rgb(33,100,210)">Some text<span><</span>/span>
+                        </code>
+                        <br><br>
+                        If I want to add a border color hsl(217,54,40) to some text:
+                        <br><br>
+                        <code class="border-normal border-black border-size-thick pad-1 margin-3 border_hsl(32deg,81%,40%)" style="font-family: monospace;">
+                            <span><</span>span class="border-normal border_hsl(32deg,81%,40%)">Some text<span><</span>/span>
+                        </code>
+                    </p>
+                </p>
+            </div>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

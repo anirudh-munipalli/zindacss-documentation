@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SamplePage.html.css"/>
+    <link rel="stylesheet" href="./responsive.html.css"/>
+    <title>Margin in ZindaCSS</title>
+</head>
+<body>
+    <zindatheme class="rgb(105,92,30) rgb(232,205,67)" full-page="false"></zindatheme>
+    <header class="sticky-top bg_rgb(232,204,67)" style="height: fit-content;">
+        <h1 class="display-inline-block margin-left-3 color_rgb(105,92,30)"><a href="#" class="no-underline">ZindaCSS</a></h1>
+        <nav class="display-inline-block pad_2% pos-right margin-right-5 width-fit-content tablet-nodisplay phone-nodisplay">
+            <zindagroup id="heading-nav-links" class="margin-5 color_#69613E bg_#B8A335:hover pad-5 round-border-1 transition_background-color_.32s"></zindagroup>
+            <a href="" class="heading-nav-links">Documentation</a>
+            <a href="" class="heading-nav-links">About</a>
+            <a href="" class="heading-nav-links">Github</a>
+        </nav>
+    </header>
+    <main class="nowrap">
+        <zindagroup id="code" class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3"></zindagroup>
+        <zindagroup id="sitemap" class="color_#695C1E bg_#ECDC8B width-10 margin-0 margin-y-1 pad-0 pad-y-1 margin-0 border-normal border-brown bg_#FFEE96:hover"></zindagroup>
+        <zindagroup id="sitemap-current" class="bg_#B5A035 width-10 margin-y-1 margin-0 pad-0 border-normal border-brown"></zindagroup>
+        <div style="display: inline; position: fixed; width: fit-content; margin: 0; margin-top: 1vh;" class="phone-nodisplay tablet-nodisplay">
+            <ul style="list-style:none; overflow-y: scroll; width: fit-content; max-height: 80vh; margin: 0;" class="pad-0 bg_#B8A335 display-inline-block">
+                <li class="sitemap"><a style="display: block;"href='./working.html'>How ZindaCSS Works?</a></li>
+                <li class="sitemap"><a style="display: block;"href="./gettingstarted.html">Getting Started / Initiating</a></li>
+                <li class="sitemap"><a style="display: block;"href="./color.html">Colors and background colors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./borders.html">Borders</a></li>
+                <li class="sitemap"><a style="display: block;"href="./flexbox.html">Flex box</a></li>
+                <li class="sitemap-current"><a style="display: block;"href="./responsive.html">Responsive Behavior</a></li>
+                <li class="sitemap">
+                    <ul style="list-style: none;">
+                        <li class="sitemap"><a style="display: block;"href="./animations/index.html">Animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-entry.html">Entry animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-focus.html">Focus animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-exit.html">Exit animations</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap"><a style="display: block;"href="./alert.html">Alert boxes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./padding.html">Padding</a></li>
+                <li class="sitemap"><a style="display: block;"href="./margin.html">Margin</a></li>
+                <li class="sitemap"><a style="display: block;"href="./width.html">Width</a></li>
+                <li class="sitemap"><a style="display: block;"href="./height.html">Height</a></li>
+                <li class="sitemap"><a style="display: block;"href="./objposition.html">Object Positioning</a></li>
+                <li class="sitemap"><a style="display: block;"href="./shadows.html">Shadows</a></li>
+                <li class="sitemap"><a style="display: block;"href="./theme.html">Themes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./customval.html">Custom Values</a></li>
+                <li class="sitemap"><a style="display: block;"href="./hover.html">Hover</a></li>
+                <li class="sitemap"><a style="display: block;"href="./groups.html">Grouping</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherSelectors.html">Other Selectors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./transition.html">Transitions</a></li>
+                <li class="sitemap"><a style="display: block;"href="./cursor.html">Cursor</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherfeatures.html">Other Features</a></li>
+
+            </ul>
+        </div>
+
+        <article class="width-10 desktop-width-8 color margin-left-0 desktop-margin-left-2 padding-left_1% phone-margin-left-0">
+            <h2>Responsive code with ZindaCSS</h2>
+            <p>ZindaCSS lets you make your website responsive, without writing any CSS</p>
+            <section>
+                <h3 class="phone-nodisplay">Hide objects on devices</h3>
+                <p>
+                    You can choose to hide objects on certain devices.
+                    <br>
+                    If I want any component(image, nav, divs etc.), to <strong>not</strong> be visible on
+                    phones, then all I need to do is add the class:
+                    <div class="code"><span><</span>div class="phone-nodisplay">TEST<span><</span>/div></div>
+                    Similarly for tablets:
+                    <div class="code"><span><</span>div class="tablet-nodisplay">TEST<span><</span>/div></div>
+                    For Desktops:
+                    <div class="code"><span><</span>div class="desktop-nodisplay">TEST<span><</span>/div></div>
+                    <strong>Note:</strong> It is highly recommended that you make your websites mobile first, which means making the 
+                    website as if it should be used for only phones, then adding responsive features to make
+                    it accessible to desktop and tablet.
+                </p>
+            </section>
+            <section>
+                <h3>Margins, paddings, and width</h3>
+                <p>
+                    To set the width of an element based on the device, use the following syntax
+                    <div class="code"><span><</span>div class="<em>device</em>-<strong>width|margin|padding</strong>-<em>number</em>">TEST<span><</span>/div></div>
+                    Example: <br>
+                    To give an object a width of 30% in phone, height of 50% in tablets, and 80% in desktops:
+                    <div class="code phone-width-3 tablet-height-5 desktop-width-8"><span><</span>div class="phone-width-3 tablet-height-5 desktop-width-8">TEST<span><</span>/div></div>
+                    To find out more about properties for paddings, margins, and width visit the respective documentation.
+                </p>
+                <hr>
+                <p>
+                    The following are the values for class names:
+                    <br>
+                    <em>device</em>-margin-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-margin-left-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-margin-right-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-margin-top-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-margin-bottom-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-margin-x-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-margin-y-<em>Number from 1 to 10</em> <br>
+                    <br>
+                    <em>device</em>-padding-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-padding-left-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-padding-right-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-padding-top-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-padding-bottom-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-padding-x-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-padding-y-<em>Number from 1 to 10</em> <br>
+                    <br>
+                    <em>device</em>-width-<em>Number from 1 to 10</em> <br>
+                    <em>device</em>-height-<em>Number from 1 to 10</em>  
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

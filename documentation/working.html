@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SamplePage.html.css"/>
+    <title>How ZindaCSS works</title>
+</head>
+<body>
+    <zindatheme class="rgb(105,92,30) rgb(232,205,67)" full-page="false"></zindatheme>
+    <header class="sticky-top bg_rgb(232,204,67)" style="height: fit-content;">
+        <h1 class="display-inline-block margin-left-3 color_rgb(105,92,30)"><a href="#" class="no-underline">ZindaCSS</a></h1>
+        <nav class="display-inline-block pad_2% pos-right margin-right-5 width-fit-content tablet-nodisplay phone-nodisplay">
+            <zindagroup id="heading-nav-links" class="margin-5 color_#69613E bg_#B8A335:hover pad-5 round-border-1 transition_background-color_.32s"></zindagroup>
+            <a href="" class="heading-nav-links">Documentation</a>
+            <a href="" class="heading-nav-links">About</a>
+            <a href="" class="heading-nav-links">Github</a>
+        </nav>
+    </header>
+    <main class="nowrap">
+        <zindagroup id="code" class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3"></zindagroup>
+        <zindagroup id="sitemap" class="color_#695C1E bg_#ECDC8B width-10 margin-y-1 pad-1 margin-0 border-normal border-browns"></zindagroup>
+        <zindagroup id="sitemap-current" class="bg_#695C1E color_#ECDC8B width-fit-content margin-1 pad-1"></zindagroup>
+        <div style="display: inline; position: fixed; width: fit-content; margin: 0; margin-top: 1vh;" class="phone-nodisplay tablet-nodisplay">
+            <ul style="list-style:none; overflow-y: scroll; width: fit-content; max-height: 80vh; margin: 0;" class="pad-0 bg_#B8A335 display-inline-block">
+                <li class="sitemap-current"><a style="display: block;"href='./working.html'>How ZindaCSS Works?</a></li>
+                <li class="sitemap"><a style="display: block;"href="./gettingstarted.html">Getting Started / Initiating</a></li>
+                <li class="sitemap"><a style="display: block;"href="./color.html">Colors and background colors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./borders.html">Borders</a></li>
+                <li class="sitemap"><a style="display: block;"href="./flexbox.html">Flex box</a></li>
+                <li class="sitemap"><a style="display: block;"href="./responsive.html">Responsive Behavior</a></li>
+                <li class="sitemap">
+                    <ul style="list-style: none;">
+                        <li class="sitemap"><a style="display: block;"href="./animations/index.html">Animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-entry.html">Entry animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-focus.html">Focus animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-exit.html">Exit animations</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap"><a style="display: block;"href="./alert.html">Alert boxes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./padding.html">Padding</a></li>
+                <li class="sitemap"><a style="display: block;"href="./margin.html">Margin</a></li>
+                <li class="sitemap"><a style="display: block;"href="./width.html">Width</a></li>
+                <li class="sitemap"><a style="display: block;"href="./height.html">Height</a></li>
+                <li class="sitemap"><a style="display: block;"href="./objposition.html">Object Positioning</a></li>
+                <li class="sitemap"><a style="display: block;"href="./shadows.html">Shadows</a></li>
+                <li class="sitemap"><a style="display: block;"href="./theme.html">Themes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./customval.html">Custom Values</a></li>
+                <li class="sitemap"><a style="display: block;"href="./hover.html">Hover</a></li>
+                <li class="sitemap"><a style="display: block;"href="./groups.html">Grouping</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherSelectors.html">Other Selectors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./transition.html">Transitions</a></li>
+                <li class="sitemap"><a style="display: block;"href="./cursor.html">Cursor</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherfeatures.html">Other Features</a></li>
+
+            </ul>
+        </div>
+
+        <article class="width-10 desktop-width-8 color margin-left-0 desktop-margin-left-2 padding-left_1% phone-margin-left-0">            
+            <h2>How ZindaCSS Works?</h2>
+            <p class="pad-3 color">
+                ZindaCSS starts by you running it and telling us the file you want to style.
+                We find the file and run through its contents. <a href="https://purgecss.com/">PurgeCSS</a> finds all CSS classes
+                used, and then it looks through our stylesheets and you get a stylesheet with only used classes.
+            <br>
+
+            </p> 
+            <div class="alert-info">
+                What this means is that only classes that you actually need are in your CSS file. This makes
+                your file much shorter and your website easier to load. No unneccessary classes.
+            </div>
+            <p class="color pad-3">
+                ZindaCSS also allows custom values in your code, so if a class is not predefined
+                you can create your own style for your class. Once again, unneccessary classes are removed.
+            </p>
+            <p class="color pad-3">
+                Also, ZindaCSS checks your file for changes, so as soon as it is changed, we create a new
+                CSS output file immediately. You can keep coding, while ZindaCSS adds the styles during runtime.
+            </p>
+            <p class="alert-info">
+                Your file is monitored for changes, and ZindaCSS compiles a new stylesheet everytime.
+            </p>
+            <p class="alert-info">
+                Once your done styling, your website will work without ZindaCSS package. You can run our software,
+                style your page and then later uninstall it if you wish. 
+            </p>
+            <p class="color pad-3">
+                Then you can add special selectors, like <span class="code">:hover</span>, which allows
+                you to make a particular class active only when a condition is met.
+                <br>
+                This is like the <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes' class="bg">pseudo selectors</a> in CSS.
+            </p>
+            <p class="color pad-3">
+                Adding to the features, you can group classes together to create a style that can be used
+                for many components. 1 style is enough for many HTML components.
+            </p>
+            <p class="color pad-3">
+                Check out getting started for details on how to setup ZindaCSS and start styling.
+            </p>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

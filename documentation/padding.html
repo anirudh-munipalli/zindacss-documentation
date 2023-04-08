@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SamplePage.html.css"/>
+    <link rel="stylesheet" href="./padding.html.css"/>    
+    <title>Padding in ZindaCSS</title>
+</head>
+<body>
+    <zindatheme class="rgb(105,92,30) rgb(232,205,67)" full-page="false"></zindatheme>
+    <header class="sticky-top bg_rgb(232,204,67)" style="height: fit-content;">
+        <h1 class="display-inline-block margin-left-3 color_rgb(105,92,30)"><a href="#" class="no-underline">ZindaCSS</a></h1>
+        <nav class="display-inline-block pad_2% pos-right margin-right-5 width-fit-content tablet-nodisplay phone-nodisplay">
+            <zindagroup id="heading-nav-links" class="margin-5 color_#69613E bg_#B8A335:hover pad-5 round-border-1 transition_background-color_.32s"></zindagroup>
+            <a href="" class="heading-nav-links">Documentation</a>
+            <a href="" class="heading-nav-links">About</a>
+            <a href="" class="heading-nav-links">Github</a>
+        </nav>
+    </header>
+    <main class="nowrap">
+        <zindagroup id="code" class="border-normal border-black border-size-thick pad-1 margin-3 color-green-3"></zindagroup>
+        <zindagroup id="sitemap" class="color_#695C1E bg_#ECDC8B width-10 margin-0 margin-y-1 pad-0 pad-y-1 margin-0 border-normal border-brown bg_#FFEE96:hover"></zindagroup>
+        <zindagroup id="sitemap-current" class="bg_#B5A035 width-10 margin-y-1 margin-0 pad-0 border-normal border-brown"></zindagroup>
+        <div style="display: inline; position: fixed; width: fit-content; margin: 0; margin-top: 1vh;" class="phone-nodisplay tablet-nodisplay">
+            <ul style="list-style:none; overflow-y: scroll; width: fit-content; max-height: 80vh; margin: 0;" class="pad-0 bg_#B8A335 display-inline-block">
+                <li class="sitemap"><a style="display: block;"href='./working.html'>How ZindaCSS Works?</a></li>
+                <li class="sitemap"><a style="display: block;"href="./gettingstarted.html">Getting Started / Initiating</a></li>
+                <li class="sitemap"><a style="display: block;"href="./color.html">Colors and background colors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./borders.html">Borders</a></li>
+                <li class="sitemap"><a style="display: block;"href="./flexbox.html">Flex box</a></li>
+                <li class="sitemap"><a style="display: block;"href="./responsive.html">Responsive Behavior</a></li>
+                <li class="sitemap">
+                    <ul style="list-style: none;">
+                        <li class="sitemap"><a style="display: block;"href="./animations/index.html">Animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-entry.html">Entry animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-focus.html">Focus animations</a></li>
+                        <li class="sitemap"> <a style="display: block;"href="./animations/animations-exit.html">Exit animations</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap"><a style="display: block;"href="./alert.html">Alert boxes</a></li>
+                <li class="sitemap-current"><a style="display: block;"href="./padding.html">Padding</a></li>
+                <li class="sitemap"><a style="display: block;"href="./margin.html">Margin</a></li>
+                <li class="sitemap"><a style="display: block;"href="./width.html">Width</a></li>
+                <li class="sitemap"><a style="display: block;"href="./height.html">Height</a></li>
+                <li class="sitemap"><a style="display: block;"href="./objposition.html">Object Positioning</a></li>
+                <li class="sitemap"><a style="display: block;"href="./shadows.html">Shadows</a></li>
+                <li class="sitemap"><a style="display: block;"href="./theme.html">Themes</a></li>
+                <li class="sitemap"><a style="display: block;"href="./customval.html">Custom Values</a></li>
+                <li class="sitemap"><a style="display: block;"href="./hover.html">Hover</a></li>
+                <li class="sitemap"><a style="display: block;"href="./groups.html">Grouping</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherSelectors.html">Other Selectors</a></li>
+                <li class="sitemap"><a style="display: block;"href="./transition.html">Transitions</a></li>
+                <li class="sitemap"><a style="display: block;"href="./cursor.html">Cursor</a></li>
+                <li class="sitemap"><a style="display: block;"href="./otherfeatures.html">Other Features</a></li>
+
+            </ul>
+        </div>
+
+        <article class="width-10 desktop-width-8 color margin-left-0 desktop-margin-left-2 padding-left_1% phone-margin-left-0">
+            <p class="color">
+                Padding adds a space around an element, that even pushes the border away:
+                <br>
+                <div class="pad-3 border-solid border-size-thick">This is an example of padding</div>
+                <br>
+                <div class="border-solid border-size-thick">This is an example of normal text</div>
+            </p>
+            You can add padding in the following ways:
+            <p>
+                <h4>Padding on all sides</h4>
+                This adds padding on top, bottom, right and left.
+                <div class="pad-3 border-solid border-size-thin">A padding on all sides of 3 units</div>
+                <div class="code"><<span>div class="pad-<em>Number between 1 to 10</em>">Example of padding on all sides<</span>/div></div>
+                Example
+                <div class="code"><<span>div class="pad-3">Example of padding on all sides<</span>/div></div>
+            </p>
+            <p>
+                <h4>Padding on top</h4>
+                This adds padding on top only.
+                <span class="pad-top-3 border-solid border-size-thin">A padding on top of 3 units</span><br>
+                <div class="code"><<span>div class="pad-top-<em>Number between 1 to 10</em>">Example of padding on top only<</span>/div></div>
+                Example:
+                <div class="code pad-top-3"><<span>div class="pad-top-3">Example of padding on top only<</span>/div></div>
+            </p>
+            <p>
+                <h4>Padding on bottom</h4>
+                This adds padding on bottom only. 
+                <span class="pad-bottom-3 border-solid border-size-thin">A padding on bottom of 3 units</span><br>
+                <div class="code"><<span>div class="pad-bottom-<em>Number between 1 to 10</em>">Example of padding on bottom only<</span>/div></div>
+                Example:
+                <div class="code pad-bottom-3"><<span>div class="pad-bottom-3">Example of padding on bottom only<</span>/div></div>
+            </p>
+            <p>
+                <h4>Padding on right</h4>
+                This adds padding on right only. 
+                <span class="pad-right-3 border-solid border-size-thin">A padding on right of 3 units</span>
+                <div class="code"><<span>div class="pad-right-<em>Number between 1 to 10</em>">Example of padding on right only<</span>/div></div>
+                Example:
+                <div class="code pad-right-3"><<span>div class="pad-right-3">Example of padding on right only<</span>/div></div>
+            </p>
+            <p>
+                <h4>Padding on left</h4>
+                This adds padding on left only. 
+                <span class="pad-left-3 border-solid border-size-thin">A padding on left of 3 units</span><br>
+                <div class="code"><<span>div class="pad-left-<em>Number between 1 to 10</em>">Example of padding on left only<</span>/div></div>
+                Example:
+                <div class="code pad-left-3"><<span>div class="pad-left-3">Example of padding on left only<</span>/div></div>
+            </p>
+            <p>
+                <h4>Padding on right and left (x)</h4>
+                This adds padding on right and left or on x axis.
+                <span class="pad-x-3 border-solid border-size-thin">A padding on right and left of 3 units</span>
+                <div class="code"><<span>div class="pad-x-<em>Number between 1 to 10</em>">Example of padding on right and left<</span>/div></div>
+                Example:
+                <div class="code pad-x-3"><<span>div class="pad-x-3">Example of padding on right and left<</span>/div></div>
+            </p>
+            <p>
+                <h4>Padding on top and bottom (y)</h4>
+                This adds padding on top and bottom or on y axis.
+                <span class="pad-y-3 border-solid border-size-thin">A padding on top and bottom of 3 units</span>
+                <div class="code"><<span>div class="pad-y-<em>Number between 1 to 10</em>">Example of padding on top and bottom<</span>/div></div>
+                Example:
+                <div class="code pad-y-3"><<span>div class="pad-y-3>">Example of padding on top and bottom<</span>/div></div>
+            </p>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
