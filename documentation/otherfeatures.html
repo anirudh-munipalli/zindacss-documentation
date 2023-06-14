@@ -146,11 +146,26 @@
             </p>
             <h2>Fonts</h2>
             <p>
-                The available fonts are currently limited to the 3 major fonts.
+                3 built in fonts are available:
                 <ol>
                     <li class="font-serif">Class: font-serif</li>
                     <li class="font-sans-serif">Class: font-sans-serif</li>
                     <li class="font-monospace">Class: font-monospace</li>
+                </ol>
+                If you want to use fonts from Google Fonts or other sources, you can use &lt;zindafont&gt;
+                <div class="code">&lt;zindafont url="<strong>PATH_TO_FONT_FILE</strong>" name="<strong>Name of font</strong>"&gt;&lt;/zindafont&gt;</div>
+                For example, to add the Robot font from Google:
+                <ol>
+                    <li>Go to the Roboto fonts tab, and click @import</li>
+                    <li>Take only the URL inside the brackets, for example: <a href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap</a></li>
+                    <li>Take note of the font name as well. This is very important</li>
+                    <div class="code">&lt;zindafont url="<strong>https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap</strong>" name="<strong>Roboto</strong>"&gt;&lt;/zindafont&gt;</div>
+                    <li>This will reference the font in your CSS.</li>
+                    <li>
+                        To use this font, give the element a class: font-Name-Of-Your-Font
+                        <br>
+                        Note: In case the font name has spaces, replace them with hyphen -.
+                    </li>
                 </ol>
             </p>
         </article>
